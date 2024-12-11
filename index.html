@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Members</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+</head>
+<body>
+<nav class="navbar navbar-default">
+    <div class="navbar-header">
+        <a class="navbar-brand" href="#">CRUD</a>
+    </div>
+    <ul class="nav navbar-nav">
+        <li><a th:href="@{/members/list}">Home</a></li>
+        <li><a href="#">Page 1</a></li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+    </ul>
+</nav>
+<div class="container-fluid">
+    <h2>Merhaba</h2>
+    <div class="alert alert-info">
+        <strong>SAYFAYA GİR!</strong> Veri tabanı işlemlerinin (CRUD) yapıldığı sayfa.
+        <a th:href="@{/members/list}" class="btn btn-primary">HOME</a>
+    </div>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-3">
+            <h3>KULLANILAN TEKNOLOJİLER</h3>
+            <p>* JPA/Hibernate</p>
+            <p>* Spring MVC</p>
+            <p>* Thymeleaf</p>
+            <p>* MySQL</p>
+            <p>* Bootstrap</p>
+            <p>* Maven</p>
+            <p>* Tomcat 8</p>
+        </div>
+        <div class="col-sm-3">
+            <h3>MİMARİ YAPI (KATMANLAR)</h3>
+            <p>* View</p>
+            <p>* Controller</p>
+            <p>* Service</p>
+            <p>* DAO/Repository</p>
+            <p>* Entity/Domain</p>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</div>
+</body>
+</html>

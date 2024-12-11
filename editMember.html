@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Üye Düzenle</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <form action="#" th:action="@{/members/update}" th:object="${member}" method="post">
+        <input type="hidden" class="form-control" th:field="*{id}" id="id" name="id" />
+        <div class="form-group">
+            <label for="username">Kullanıcı Adı:</label>
+            <input type="text" class="form-control" th:field="*{username}" id="username" name="username" />
+        </div>
+        <div class="form-group">
+            <label for="contactEmail">Email:</label>
+            <input type="text" class="form-control" th:field="*{contactEmail}" id="contactEmail" name="contactEmail" />
+        </div>
+        <div class="form-group">
+            <label for="securityCode">Şifre:</label>
+            <input type="password" class="form-control" th:field="*{securityCode}" id="securityCode" name="securityCode" />
+        </div>
+        <button name="submit" class="btn btn-success" type="submit" value="1">Güncelle</button>
+    </form>
+</div>
+</body>
+</html>
